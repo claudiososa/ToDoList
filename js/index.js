@@ -1,5 +1,23 @@
 var list = [];
 var id = 0;
+var storageLength = localStorage.length;
+//localStorage.clear();
+
+if ( storageLength > 0){
+    id = storageLength;
+
+    let storageItem;
+    
+    for (let i = 0; i < localStorage.length; i++){        
+        storageItem = JSON.parse(localStorage.getItem(localStorage.key(i)));
+        list.push(storageItem);    
+    }
+
+    updateList();
+}else{
+    //Local storage is empty
+    console.log('storage vacio');
+}
 
 const addTask = (event,form) => {
     event.preventDefault();
@@ -16,6 +34,8 @@ const addTask = (event,form) => {
         }
 
         list.push(task);
+        localStorage.setItem(id, JSON.stringify(task));
+        //console.log('detalle',localStorage.getItem(id));
         updateList();
 
     } else {
@@ -29,7 +49,8 @@ const validate = (form) => {
     return false
 }
 
-const updateList = () => {
+//const updateList = () => {
+function updateList(){
     console.log(list);
 
     let listContainer = document.querySelector('#list');
@@ -45,11 +66,16 @@ const updateList = () => {
 
 const deleteItem = (id) => {
     list = list.filter( item => item.id != id);
+    localStorage.removeItem(id);
     updateList();
 }
 
 const doneItem = (id) => {
     list.find( item => item.id === id).status = 'realizada';
+        
+    let itemTemp = list.find( item => item.id === id);    
+    localStorage.removeItem(id);
+    localStorage.setItem(id,JSON.stringify(itemTemp));
     updateList();
 }
 
