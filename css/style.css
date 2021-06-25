@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    font-size: 2rem;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin:1rem;
+    border-radius: 0.8rem;
+    border:1px solid green;
+}
+
+.boxTask {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin:1rem;
+    border-radius: 0.8rem;
+    border:1px solid green;
+    width: 40%;
+
+}
+.texto {
+    font-family: 'Courier New', Courier, monospace;
+    color:chartreuse;
+}
+
+.textoCambiado {
+    font-family: 'Courier New', Courier, monospace;
+    color:red;
+}
+
+input {
+    height: 3rem;
+    color:chartreuse;
+    border:1px solid chartreuse;
+}
+
+
+button {
+    padding: 0.5rem;
+    margin-top:1.4rem;
+    color:black;
+    border-radius: 0.5rem;
+    font-weight: 200;
+    background-color:#e8ff3c;
+    font-size: 1.3rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+img {
+    margin-bottom: 3rem;
+}
+
+#list {
+    width: 100%;
+    color:chartreuse;
+}
+
+p {
+    color:chartreuse;
+}
+
+.no_realizada {
+    background-color:darkolivegreen;
+    margin-bottom: 0.7rem;
+}
+
+.realizada {
+    border:1px solid green;
+    background-color:black;
+}

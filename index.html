@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>ToDoList para CoderHouse</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="header">
+                <img src="img/logo.png" width="150px" alt="" srcset="">
+            </div>
+            <div class="form-add">
+                <form onsubmit="addTask(event,this)">
+                    <input type="text" name="" size="50" placeholder="Ingrese Tarea">
+
+                    <input type="date" name="">
+
+                    <button type="submit" id="buttonAction">Agregar Tarea</button>
+                </form>
+            </div>
+        </div>
+        <div class="boxTask">
+            <p>Lista de Tareas</p>
+            <div id="list"></div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
